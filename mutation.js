@@ -11,7 +11,7 @@ return true;
 }
 console.log(mutation(arr))
 
-//------------------------------------------(another solution)
+//------------------------------------------(another solution using every)
 function mutation(arr) {
 	arr[0] = arr[0].toLowerCase()
 	arr[1] = arr[1].toLowerCase()
@@ -19,3 +19,18 @@ function mutation(arr) {
   let test = arr[1].split(" ") // ['t', 'j', 'a']
   return test.every(value => orig.includes(value)) // return true or false, whether every element of test is included in orig or not
 }
+
+//-----------------------------------------(using indexOf)
+
+let str = 'abccaba'
+
+function mutation(str) {
+	for(let i=0; i< str.length; i++) {
+		if(str.indexOf(str[i]) !== i) {
+			return str[i];
+		}
+	}
+}
+console.log(mutation(str)) // return the element which repeat first in the string
+			   // return 'c' as it comes again
+
