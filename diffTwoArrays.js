@@ -27,4 +27,4 @@ function diffArray(arr1, arr2) {
 	console.log(arr)
 	return arr
 }
-console.log([1, 2, 3, 5], [1, 2, 3, 4, 5]))
+console.log([1, 2, 3, 5], [1, 2, 3, 4, 5]));
