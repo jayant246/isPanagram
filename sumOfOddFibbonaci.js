@@ -1,3 +1,4 @@
+// sum of all odd fibonacci number less than or equal to num
 function sumFibs(num) {
   let a = 1
   let b = 1
@@ -12,15 +13,16 @@ function sumFibs(num) {
   return arr.reduce((acc, value) => acc + value, 0)
 }
 
-// ------------------(OR)
+// ------------------(OR) {put fibbonacci numbers which are <= num on front using While loop }
 
 function sumFibs(num) {
 	let arr = [1,1]
-	while((answ = arr[0] + arr[1]) <= num) {
-		arr.unshift(answ)
+	while((answ = arr[0] + arr[1]) <= num) { // coz we want that fibbonacci number which is less than or equal to num
+		arr.unshift(answ) // here we put that number on the first
 	}
 	console.log(arr)
-	return arr.reduce((acc, value) => acc + value*(value%2),0)
+	return arr.reduce((acc, value) => acc + value*(value % 2),0) // here value % 2 gives 1 when value is odd and it gives 
+	// zero(0) when value is even so, it seperates out the even and odd number
 }
 
 console.log(sumFibs(10))
